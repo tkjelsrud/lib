@@ -475,6 +475,13 @@ getColor(name) {
     }
     return null;
  },
+getNameFromHex(hex) {
+    for(let i = 0; i < Color.risoColors.length; i++) {
+      if(Color.risoColors[i]["hex"] == hex)
+        return Color.risoColors[i]["name"];
+    }
+    return null;
+ },
 random() {
   return Color.risoColors[Math.floor(Math.random() * Color.risoColors.length)];
 },
